@@ -1,4 +1,4 @@
 .env
-out/out.txt
-out/out-deep.txt
+out/*.txt
 __pycache__
+*.swp
