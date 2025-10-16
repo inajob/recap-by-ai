@@ -1,0 +1,4 @@
+.env
+out/out.txt
+out/out-deep.txt
+__pycache__
