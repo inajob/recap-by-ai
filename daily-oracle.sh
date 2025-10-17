@@ -1,4 +1,5 @@
 #!/bin/bash
+. ~/myvenv/bin/activate
 
 # daily-oracle.sh
 # This script provides daily "oracles" or advice on different topics

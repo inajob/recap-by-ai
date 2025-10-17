@@ -1,3 +1,5 @@
+. ~/myvenv/bin/activate
+
 python get-same-month.py --deep > out/out-deep.txt
 python get-same-month.py > out/out-shallow.txt
 
