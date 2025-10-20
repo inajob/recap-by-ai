@@ -11,11 +11,6 @@ load_dotenv()
 GOOGLE_API_KEY=os.getenv('GOOGLE_API_KEY')
 genai.configure(api_key=GOOGLE_API_KEY)
 
-model = genai.GenerativeModel("gemini-2.5-flash", generation_config=genai.types.GenerationConfig(
-    temperature=0,
-    candidate_count=1
-    ))
-
 def make_vec(title, body):
   result = genai.embed_content(
     model="models/gemini-embedding-001",
@@ -24,7 +19,11 @@ def make_vec(title, body):
     title=title)
   return result["embedding"]
   
-def chat(prompt):
+def chat(prompt, temperature=0.0):
+  model = genai.GenerativeModel("gemini-2.5-flash", generation_config=genai.types.GenerationConfig(
+    temperature=temperature,
+    candidate_count=1
+    ))
   response = None
   for retry in range(3):
     response = None
@@ -38,4 +37,4 @@ def chat(prompt):
       continue
     #print("response", response.text)
     break
-  return response 
+  return response
