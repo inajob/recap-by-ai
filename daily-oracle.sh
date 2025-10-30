@@ -38,12 +38,12 @@ case $DAY_OF_WEEK in
     python chat.py prompts/prelude-hobby.txt out/out-deep.txt > out/daily-oracle.txt
     ;;
   5) # Friday
-    echo "Topic: Work"
-    python chat.py prompts/prelude-work.txt out/out-deep.txt > out/daily-oracle.txt
+    echo "Topic: Future Talk"
+    python chat.py prompts/prelude-future-talk.txt out/out-deep.txt > out/daily-oracle.txt
     ;;
   6) # Saturday
-    echo "Topic: Hobby"
-    python chat.py prompts/prelude-hobby.txt out/out-deep.txt > out/daily-oracle.txt
+    echo "Topic: 40代のアドバイス"
+    python chat.py prompts/prelude-life-40s.txt out/out-deep.txt > out/daily-oracle.txt
     ;;
   7) # Sunday
     echo "Topic: Health"
