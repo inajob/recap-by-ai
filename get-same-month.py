@@ -37,6 +37,8 @@ def getPage(title):
 def dumpPage(title, body):
   if len(body) == 0:
     return
+  if len(body) > 1000:
+    body = body[:1000]
   print()
   print("===")
   print()
